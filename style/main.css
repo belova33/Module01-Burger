@@ -23,7 +23,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-basis: 68.5;
+    flex-basis: 68.5%;
 }
 .header-logo {
     display: block;
@@ -96,7 +96,7 @@ header {
     color: #fff;
     background-image: url(../image/bg.jpg);
     background-size: cover;
-    padding: 142px;
+    padding: 142px 0;
     background-position: center center;
 }
 .breadcrumbs {
@@ -149,15 +149,14 @@ header {
     background-position: center center;
     margin-top: 140px;
     margin-bottom: 100px;
-    padding-left: 100px;
+    padding: 100px 95px;
 }
 .banner-title {
     font-size: 60px;
     font-weight: 900;
     color: #fff;
     margin-top: 0px;
-    margin-bottom: 12px;
-    padding-top: 95px;
+    margin-bottom: 12px;    
 }
 .banner-title span  {
     font-size: 14px;
@@ -174,7 +173,7 @@ header {
 }
 .banner-text {
     color: #FAF9F9;
-    font-size: 15p;
+    font-size: 15px;
     line-height: 1.6;
     font-family: 'Open Sans', sans-serif;
     max-width: 350px;
@@ -191,7 +190,6 @@ header {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
-    margin-bottom: 95px;
     border: 1px solid #FBB731;
 }
 .banner-link:hover {
@@ -263,6 +261,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase;
     margin: 0 auto;
     gap: 9px;
 }
