@@ -15,7 +15,10 @@
     <header id="headerTop">
         <div class="container">
             <div class="header">
-                <div class="headr-item">
+                <div class="header-burger">
+                    <button class="burger" onclick="openModal()"></button>
+                </div>
+                <div class="header-item">
                     <a href="index.html" class="header-logo"></a>
                     <nav>
                         <ul class="header-nav">
@@ -43,7 +46,7 @@
                 <li><a href="#menuBurger">Меню</a></li>
             </ul>
             <h1 class="title">Наше Меню</h1>
-            <p class="description">Выбирай из предложенного ассортимента и мы доставим блюдо в течении часа</p>
+            <p class="description">Выбирай из предложенного ассортимента и&nbsp;мы доставим блюдо в течении часа</p>
         </div>
     </div>
     <main>
@@ -54,7 +57,7 @@
                         <span>скидка</span>
                         -30%
                     </h2>
-                    <p class="banner-text">Только при покупке 3-х и более позиций, мы дарим скидку. Акции не суммируются.</p>
+                    <p class="banner-text">Только при покупке 3-х и более позиций, мы&nbsp;дарим скидку. Акции не суммируются.</p>
                     <a href="#menuBurger" class="banner-link">купить сейчас</a>
                 </div>
             </div>
@@ -143,47 +146,49 @@
             </div>
         </section>
 
-        <section class="products">
+        <section class="products menu-other">
             <div class="container">
                 <div class="products-header">
                     <h2 class="products-title">
                         Дополнительно
                     </h2>
                 </div>
-                <div class="products-grid">
-                    <div class="products-grid-item">
-                        <div class="products-grid-cover">
-                            <img src="image/products/img1.jpg" alt="Сэндвич">
+                <div class="products-grid">  
+                    
+                        <div class="products-grid-item">
+                            <div class="products-grid-cover">
+                                <img src="image/products/img1.jpg" alt="Сэндвич">
+                            </div>
+                            <p class="products-grid-title">Сэндвич</p>
+                            <p class="products-grid-price">$3</p>
+                            <button type="button" class="products-grid-btn">
+                                <span class="products-grid-icon"></span>
+                                <span class="products-grid-text">Купить</span>
+                            </button>
                         </div>
-                        <p class="products-grid-title">Сэндвич</p>
-                        <p class="products-grid-price">$3</p>
-                        <button type="button" class="products-grid-btn">
-                            <span class="products-grid-icon"></span>
-                            <span class="products-grid-text">Купить</span>
-                        </button>
-                    </div>
-                    <div class="products-grid-item">
-                        <div class="products-grid-cover">
-                            <img src="image/products/img2.jpg" alt="Картошка Фри">
+                        <div class="products-grid-item">
+                            <div class="products-grid-cover">
+                                <img src="image/products/img2.jpg" alt="Картошка Фри">
+                            </div>
+                            <p class="products-grid-title">Картошка Фри</p>
+                            <p class="products-grid-price">$5</p>
+                            <button type="button" class="products-grid-btn">
+                                <span class="products-grid-icon"></span>
+                                <span class="products-grid-text">Купить</span>
+                            </button>
                         </div>
-                        <p class="products-grid-title">Картошка Фри</p>
-                        <p class="products-grid-price">$5</p>
-                        <button type="button" class="products-grid-btn">
-                            <span class="products-grid-icon"></span>
-                            <span class="products-grid-text">Купить</span>
-                        </button>
-                    </div>
-                    <div class="products-grid-item">
-                        <div class="products-grid-cover">
-                            <img src="image/products/img3.jpg" alt="Хот-Дог">
+                        <div class="products-grid-item">
+                            <div class="products-grid-cover">
+                                <img src="image/products/img3.jpg" alt="Хот-Дог">
+                            </div>
+                            <p class="products-grid-title">Хот-Дог</p>
+                            <p class="products-grid-price">$7</p>
+                            <button type="button" class="products-grid-btn">
+                                <span class="products-grid-icon"></span>
+                                <span class="products-grid-text">Купить</span>
+                            </button>
                         </div>
-                        <p class="products-grid-title">Хот-Дог</p>
-                        <p class="products-grid-price">$7</p>
-                        <button type="button" class="products-grid-btn">
-                            <span class="products-grid-icon"></span>
-                            <span class="products-grid-text">Купить</span>
-                        </button>
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -240,23 +245,28 @@
         </div>
     </footer> 
     <a href="#headerTop" class="button-up hidden" id="btnUp">Наверх</a>    
+    <div id="modal" class="modal" style="top: -400px;">
+        <ul class="header-nav">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#" class="active">Меню</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <button class="burger-close" onclick="closeModal()"></button>
+    </div>
     <script>
     // Smooth Scroll
        const links = document.querySelectorAll(".banner-link");
-
        for (const link of links) {
             link.addEventListener("click", clickHandler);
        }
-
        function clickHandler(e) {
             e.preventDefault();
             const href = this.getAttribute("href");
-
             document.querySelector(href).scrollIntoView({
                 behavior: "smooth"
                     });
        }    
-
        // Button Up
        window.onscroll = function(){scrollFunction()};
 
@@ -265,7 +275,6 @@
        for (const upbutton of upbuttons) {
            upbutton.addEventListener("click", clickHandler);
        }
-
        function clickHandler(e) {
             e.preventDefault();
             const href = this.getAttribute("href");
@@ -274,13 +283,20 @@
                 behavior: "smooth"
             });
        }
-
        function scrollFunction(){
            if ( document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
                document.getElementById('btnUp').className = 'button-up visible';
            } else {
                document.getElementById('btnUp').className = 'button-up hidden';
            }
+       }
+        // Menu
+        function openModal() {
+           document.getElementById("modal").style.top = "0px";
+       }
+
+       function closeModal() {
+           document.getElementById("modal").style.top = "-400px";
        }
     </script>   
 </body>
