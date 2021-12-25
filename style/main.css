@@ -745,8 +745,9 @@ header {
         width: 16.6px;
         height: 18px;
         background-size: contain;
-}
+    }
     .products-grid-text {
         font-size: 14px;
     }
+}
 }
