@@ -308,13 +308,11 @@ header {
 .footer-box {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 .footer-logo {
     width: 63px;
     height: 56px;
-}
-.footer-item {
-    flex: 0 0 auto;
 }
 .footer-item h2 {
     font-size: 20px;
@@ -322,6 +320,7 @@ header {
     text-transform: uppercase;
     margin-bottom: 19px;
     margin-top: 0;
+    line-height: 1.5;
 }
 .footer-list li {
     margin-bottom: 9px;
@@ -635,11 +634,28 @@ header {
     .header {
         gap: 21px;
     }
+    .menu-other .container {
+        padding-right: 0;
+    }
+    .button-up.visible {
+        display: none;
+    } 
 }
 
 @media (max-width: 567px) {
+    .header {
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
+    .header-logo {
+        width: 116px;
+        height: 37px;
+    }
     .breadcrumbs a {
         font-size: 14px;
+    }
+    .bg {
+        margin-bottom: 33px;
     }
     .title {
         font-size: 30px;
@@ -653,57 +669,96 @@ header {
     .banner-box {
         padding: 35px 24px 54px;
         background-position: 17% center;
+        margin-bottom: 40px;
     }
     .menu-title,
     .products-title {
     font-size: 27px;
     }
     .menu-select {
-        border: 0.5px solid #DEDEDE;
-        padding: 8px 15px;
-        border-radius: 22px;
-        color: #443737;
         font-size: 12px;
-        appearance: none;
         flex-basis: 136px;
-        background-image: url(../image/chevron-down.svg);
-        background-size: 12.79px 7.75px;
-        background-repeat: no-repeat;
+        padding: 13px 24px 13px 15 px;
         background-position: 90% center;
     }
-    
+    .menu-header {
+        margin-bottom: 30px;
+    }
+    .menu-grid,
+    .products-grid {
+        gap: 25px 15px;
+        margin-bottom: 40px;
+    }
     .menu-grid-cover,
     .products-grid-cover {
-        height: 380px;
+        height: 56vw;
+        margin-bottom: 10px;
     }
     .menu-grid-cover img,
     .products-grid-cover img {
-        height: 320px;
+        height: 100%;
     }
     .menu-grid-title, 
     .products-grid-title {
-        font-size: 19px;
-        margin-top: 3px;
+        font-size: 15px;
     }
-    .menu-grid-price, .products-grid-price {
+    .menu-grid-price,
+     .products-grid-price {
         font-size: 16px;
-        margin-top: 7px;
-        margin-bottom: 10px;
+        margin-top: 6px;
+        margin-bottom: 14px;
     }
-    .menu-grid-btn, .products-grid-btn {
+    .menu-grid-btn, 
+    .products-grid-btn {
         padding: 10px 21.5px;
-        margin: 0 auto;
         gap: 5px;
     }
-    .menu-grid-icon, 
-    .products-grid-icon {
-        width: 16.6px;
-        height: 18px;
-        background-size: contain;
-}
-    .products-grid-text {
-        font-size: 14px;
+    .menu-other {
+        height:108vw;
     }
+    .menu-other .products-grid {
+        padding-bottom: 24vw;
+    }
+    .menu-other .products-grid-cover {
+        height: 56vw;
+    }
+    .menu-other .products-grid-cover img {
+        height: 100%;
+    }
+    .menu-other .products-grid-item {
+        flex: 0 0  38vw;
+    }
+    .footer {
+        margin-top: 28px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .footer-list + .footer-list-tel {
+        display: none;
+    }
+    .footer-tel {
+        display: block;
+    }
+    .footer-box {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas:"logo tel" "link link" "info info";
+    }
+    .footer-item:nth-child(1) {
+        grid-area: logo;
+    }
+    .footer-item:nth-child(2) {
+        grid-area: link;
+    }
+    .footer-item:nth-child(3) {
+        grid-area: info;
+    }
+    .footer-tel {
+        grid-area: tel;
+        text-align: right;
+        padding-right: 15px;
+    }
+}
 
 @media (max-width: 360px) {
     .header-logo {
@@ -749,5 +804,4 @@ header {
     .products-grid-text {
         font-size: 14px;
     }
-}
 }
