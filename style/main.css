@@ -596,15 +596,13 @@ header {
         grid-template-columns: repeat(2, 1fr);
         gap: 50px 15px;
     }
-    .products-grid {
-        
+    .products-grid {        
         gap: 50px 15px;
     }
     .menu-other {
         overflow: hidden;
         height: 610px;
-    }
-    
+    }    
     .menu-other .products-grid {
         display: flex;
         width: auto;
@@ -667,7 +665,7 @@ header {
         padding: 55px 0;
     }
     .banner-box {
-        padding: 35px 24px 54px;
+        padding: 54px 24px 54px;
         background-position: 17% center;
         margin-bottom: 40px;
     }
@@ -678,7 +676,7 @@ header {
     .menu-select {
         font-size: 12px;
         flex-basis: 136px;
-        padding: 13px 24px 13px 15 px;
+        padding: 13px 24px 13px 15px;
         background-position: 90% center;
     }
     .menu-header {
@@ -741,7 +739,7 @@ header {
     }
     .footer-box {
         display: grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 25% 75%;
         grid-template-areas:"logo tel" "link link" "info info";
     }
     .footer-item:nth-child(1) {
@@ -770,11 +768,13 @@ header {
 
 @media (max-width: 320px) {
     .banner-box {
-        background-position: 25% center;
+        background-position: 25% center;        
     }
-    .menu-grid-cover,
-    .products-grid-cover {
-        height: 280px;
+    .menu-select {
+        display: none;
+    }
+    .products-header {
+        margin-bottom: 30px;
     }
     .menu-grid-cover img,
     .products-grid-cover img {
@@ -784,6 +784,12 @@ header {
     .products-grid-title {
         font-size: 13px;
         margin-top: 3px;
+    }
+    .menu-title {
+        font-size: 22px;
+    }
+    .products-title {        
+        font-size: 22px;
     }
     .menu-grid-price, .products-grid-price {
         font-size: 14px;
@@ -803,5 +809,8 @@ header {
     }
     .products-grid-text {
         font-size: 14px;
+    }
+    .footer-item h2 {
+        font-size: 16px;
     }
 }
