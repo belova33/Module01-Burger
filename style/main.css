@@ -1,5 +1,6 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
+    overflow-x: hidden;
 }
 .container {
     max-width: 1180px;
@@ -625,6 +626,74 @@ header {
     .footer-list + .footer-list-tel {
         display: block;
     }
+    .footer {
+        padding-top: 59px;
+        padding-bottom: 71px;
+    }
+    .menu-other {
+        margin-bottom: 140px;
+        height: 571px;
+    }
+    .content {
+        margin-top: 42px;
+        margin-left: 28px;
+        padding-top: 0;
+        padding-bottom: 123px;
+    }
+    span {
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .content-title {
+        font-weight: 800;
+        font-size: 86px;
+        line-height: 101px;
+    }
+    .content-text {
+        font-size: 14px;
+        line-height: 140%;
+    }
+    .content-link {
+        border-radius: 4.45px;
+        padding: 17.24px 40.11px;
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .visual-bg {
+        margin-right: 15px;
+        width: 198px;
+        right: 15px;        
+    }
+    .main img {
+        width: 829px;
+        right: -137px;        
+        width: 496px;
+        height: 516px;        
+        top: 130px;
+    }
+    .promo {
+        padding-top: 106px;
+        padding-bottom: 106px;
+    }
+    .promo-left {
+        padding: 44px 30px;
+    }
+    .promo-right {
+        padding: 60px 30px;
+    }
+    .footer {
+        padding-top: 59px;
+        padding-bottom: 71px;
+    }
+    .footer-tel {
+        grid-area: tel;
+        text-align: right;
+        padding-right: 15px;
+    }
+    .footer-list .footer-list-tel {
+        display: block;
+    }
+    
 }
 
 @media (max-width: 765px) {
@@ -640,7 +709,7 @@ header {
     .button-up.visible {
         display: none;
     } 
-}
+}   
 
 @media (max-width: 567px) {
     .header {
@@ -715,6 +784,7 @@ header {
     }
     .menu-other {
         height:108vw;
+        margin-bottom: 60px;
     }
     .menu-other .products-grid {
         padding-bottom: 24vw;
