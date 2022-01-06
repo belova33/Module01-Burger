@@ -577,7 +577,7 @@ header {
     .container {
         max-width: 738px;
     }
-    .header-logo {
+        .header-logo {
         width: 150px;
         height: 48px;
         background-size: contain;
@@ -636,11 +636,14 @@ header {
     }
     .content {
         margin-top: 42px;
-        margin-left: 28px;
         padding-top: 0;
         padding-bottom: 123px;
     }
-    span {
+    .wrapper {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .content-title span {
         font-size: 22px;
         line-height: 27px;
     }
@@ -660,16 +663,18 @@ header {
         line-height: 16px;
     }
     .visual-bg {
-        margin-right: 15px;
-        width: 198px;
-        right: 15px;        
+        position: absolute;        
+        width: 198px;              
     }
     .main img {
         width: 829px;
         right: -137px;        
         width: 496px;
         height: 516px;        
-        top: 130px;
+        top: 85px;        
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 0;        
     }
     .promo {
         padding-top: 106px;
@@ -798,6 +803,9 @@ header {
     .menu-other .products-grid-item {
         flex: 0 0  38vw;
     }
+    .products-grid-text, .menu-grid-text {
+        font-size: 14px;
+    }
     .footer {
         margin-top: 28px;
         padding-top: 60px;
@@ -827,6 +835,58 @@ header {
         grid-area: tel;
         text-align: right;
         padding-right: 15px;
+    }
+}
+
+@media (max-width: 376px) {
+    .content {
+        margin-top: 42px;
+        padding-top: 0;
+        padding-bottom: 61px;
+        flex: 0 0 550px;
+    }
+    .wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+        flex-direction: column;
+        height: 550px;
+    }
+    .content-title span {
+        font-size: 14px;
+        line-height: 27px;
+    }
+    .content-title {
+        font-weight: 800;
+        font-size: 58px;
+        line-height: 120%;
+        width: 290px;
+    }
+    .content-text {
+        font-size: 13px;
+        line-height: 140%;
+        width: 288px;
+        margin-bottom: 32px;
+    }
+    .content-link {
+        border-radius: 4.45px;
+        padding: 17.24px 40.11px;
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .visual-bg {
+        display: none;             
+    }
+    .main img {
+        width: 298px;
+        height: 297.07px;
+        top: -361px;
+        right: -81px;
+    }
+    .promo {
+        width: 100%;
+    }
+    .promo-left {
+        margin-bottom: 22px;
     }
 }
 
@@ -878,16 +938,15 @@ header {
         padding: 10px 21.5px;
         margin: 0 auto;
         gap: 5px;
+        font-size: 14px;
+        line-height: 18px;
     }
     .menu-grid-icon, 
     .products-grid-icon {
         width: 16.6px;
         height: 18px;
         background-size: contain;
-    }
-    .products-grid-text {
-        font-size: 14px;
-    }
+    }    
     .footer-item h2 {
         font-size: 16px;
     }
