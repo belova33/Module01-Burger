@@ -679,6 +679,7 @@ header {
     .promo {
         padding-top: 106px;
         padding-bottom: 106px;
+        gap: 15px;
     }
     .promo-left {
         padding: 44px 30px;
@@ -698,7 +699,6 @@ header {
     .footer-list .footer-list-tel {
         display: block;
     }
-    
 }
 
 @media (max-width: 765px) {
@@ -819,7 +819,7 @@ header {
     }
     .footer-box {
         display: grid;
-        grid-template-columns: 25% 75%;
+        grid-template-columns: 25% 1fr;
         grid-template-areas:"logo tel" "link link" "info info";
     }
     .footer-item:nth-child(1) {
@@ -834,7 +834,6 @@ header {
     .footer-tel {
         grid-area: tel;
         text-align: right;
-        padding-right: 15px;
     }
 }
 
